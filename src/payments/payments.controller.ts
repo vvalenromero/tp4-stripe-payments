@@ -4,6 +4,7 @@ import {
   Controller,
   Get,
   Headers,
+  HttpCode,
   Logger,
   Post,
   Req,
@@ -39,6 +40,7 @@ export class PaymentsController {
 
   /** Entrega 2: Stripe avisa aca cuando el cobro se concreto. */
   @Post('webhook')
+  @HttpCode(200) // la consigna pide 200 en el camino feliz (Nest devuelve 201 en POST por defecto)
   webhook(
     @Req() req: RawBodyRequest<Request>,
     @Headers('stripe-signature') signature?: string,
