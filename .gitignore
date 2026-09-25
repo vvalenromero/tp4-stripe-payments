@@ -1,0 +1,30 @@
+# dependencias
+node_modules/
+
+# compilado
+dist/
+build/
+
+# variables de entorno — NUNCA versionar secretos
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# tests / coverage
+coverage/
+.nyc_output/
+
+# sistema operativo / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# cache de build
+*.tsbuildinfo
