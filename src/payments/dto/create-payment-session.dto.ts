@@ -25,7 +25,7 @@ export class PaymentItemDto {
 }
 
 export class CreatePaymentSessionDto {
-  /** Viaja en metadata del PaymentIntent para reconocerlo despues en el webhook. */
+  /** Viaja en metadata del PaymentIntent para reconocerlo después en el webhook. */
   @IsString()
   @IsNotEmpty()
   orderId!: string;

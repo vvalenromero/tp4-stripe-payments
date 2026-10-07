@@ -29,16 +29,16 @@ export class PaymentsController {
   /** Redirect de Checkout cuando el pago sale bien. */
   @Get('success')
   success() {
-    return { ok: true, message: 'Payment successful' };
+    return { ok: true, message: 'Pago exitoso' };
   }
 
   /** Redirect de Checkout cuando el usuario cancela. */
   @Get('cancel')
   cancel() {
-    return { ok: false, message: 'Payment cancelled' };
+    return { ok: false, message: 'Pago cancelado' };
   }
 
-  /** Entrega 2: Stripe avisa aca cuando el cobro se concreto. */
+  /** Entrega 2: Stripe avisa acá cuando el cobro se concreto. */
   @Post('webhook')
   @HttpCode(200) // la consigna pide 200 en el camino feliz (Nest devuelve 201 en POST por defecto)
   webhook(
