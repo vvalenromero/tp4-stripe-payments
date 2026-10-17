@@ -29,13 +29,13 @@ export class PaymentsController {
   /** Redirect de Checkout cuando el pago sale bien. */
   @Get('success')
   success() {
-    return { ok: true, message: 'Pago exitoso' };
+    return { ok: true, message: 'Payment successful' };
   }
 
   /** Redirect de Checkout cuando el usuario cancela. */
   @Get('cancel')
   cancel() {
-    return { ok: false, message: 'Pago cancelado' };
+    return { ok: false, message: 'Payment cancelled' };
   }
 
   /** Entrega 2: Stripe avisa acá cuando el cobro se concreto. */
